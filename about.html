@@ -24,10 +24,12 @@ Author URL: http://w3layouts.com
 </head>
 
 <body>
-    <!--/Header-->
-    <header id="site-header" class="fixed-top">
+     <!--/Header-->
+    <header id="site-header" class="fixed-top" style="
+    position: relative;
+">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0" >
                <img class="img1" src="assets/images/logo.png" alt="">
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
@@ -35,19 +37,71 @@ Author URL: http://w3layouts.com
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        <li class="nav-item" >
+                            <a class="nav-link active " aria-current="page" href="index.html" style="
+                            color: black;
+                        ">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="about.html">About</a>
+                            <a class="nav-link" href="about.html" style="
+                            color: black;
+                        ">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-togglex" href="Services" id="navbarDropdown"style="
+                            color: black;
+                        " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services <span class="fa fa-angle-down ms-1"></span>
+                            </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">
+                                    <a class="nav-link " href="services.html" style="
+                                    color: black;
+                                ">All Services</a>
+                                </li>
+                                <li><a class="dropdown-item pt-2" href="st.html">SPINAL DECOMPRESSION THERAPY</a></li>
+                                <li><a class="dropdown-item" href="sp.html">SPORTS PHYSIOTHERAPY</a></li>
 
+                                <li><a class="dropdown-item" href="pp.html">POST OPERATIVE REHABILITATION</a></li>
+                                <li><a class="dropdown-item" href="pc.html">POSTURE CORRECTION </a></li>
+
+                                <li><a class="dropdown-item" href="op.html">ORTHOTICS AND PROSTHETIC SUGGESTIONS </a></li>
+                                <li><a class="dropdown-item" href="nd.html">DRY NEEDLING </a></li>
+                                <li><a class="dropdown-item" href="mp.html">MUSCULOSKELETAL PHYSIOTHERAPY </a></li>
+                                <li><a class="dropdown-item" href="mm.html">MCKENZIE METHOD</a></li>
+                                <li><a class="dropdown-item" href="kt.html">KINESIO TAPING </a></li>
+                                <li><a class="dropdown-item" href="fm.html">FOOTWEAR MODIFICATIONS</a></li>
+                                <li><a class="dropdown-item" href="ep.html">EXERCISE PHYSIOTHERAPY </a></li>
+                                <li><a class="dropdown-item" href="ct.html">Chiropractic Care </a></li>
+								<li><a class="dropdown-item scroll" href="cp.html">CHRONIC PAIN MANAGEMENT </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html"style="
+                            color: black;
+                        ">Contact</a>
+                        </li>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="career.html" style="
+                          color: black;
+                      ">Career</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="reviews.html" style="
+                          color: black;
+                      ">Review</a>
+                       <li class="nav-item">
+                        <a class="nav-link " href="book.html" style="
+                          color: black;">Booking</a>
+                    </li>
+                      </li>   
+                      <li class="nav-item">
+                            
+                        <a class="nav-link " href="resources.html" style="
+                          color: black;">Resources</a>
+                    </li></a>
                     </ul>
                     <!--/search-right-->
                     <ul class="header-search me-lg-4">
