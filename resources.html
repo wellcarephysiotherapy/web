@@ -1,0 +1,432 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Resources | WellCare Physiotherapy</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/l1.png">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style-liberty.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* FAQ Section */
+        .faq-container {
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            display: none;
+            margin: 5px 0 10px 0;
+            padding: 10px;
+            border-left: 3px solid #007bff;
+            background-color: #f1f1f1;
+        }
+
+        .faq-question:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-icon {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .chatbot-popup {
+            display: none;
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .chatbot-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .chatbot-content {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .chatbot-footer {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            outline: none;
+        }
+
+        .chatbot-send {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .chatbot-send:hover {
+            background-color: #0056b3;
+        }
+
+        .chatbot-message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+
+        .chatbot-message.user {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="site-header" class="fixed-top" style="
+    position: relative;
+">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0" >
+               <img class="img1" src="assets/images/logo.png" alt="">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item" >
+                            <a class="nav-link " aria-current="page" href="index.html" style="
+                            color: black;
+                        ">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" style="
+                            color: black;
+                        ">About</a>
+                        </li>
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-togglex" href="Services" id="navbarDropdown"style="
+                            color: black;
+                        " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services <span class="fa fa-angle-down ms-1"></span>
+                            </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">
+                                    <a class="nav-link " href="services.html" style="
+                                    color: black;
+                                ">All Services</a>
+                                </li>
+                                <li><a class="dropdown-item pt-2" href="st.html">SPINAL DECOMPRESSION THERAPY</a></li>
+                                <li><a class="dropdown-item" href="sp.html">SPORTS PHYSIOTHERAPY</a></li>
+
+                                <li><a class="dropdown-item" href="pp.html">POST OPERATIVE REHABILITATION</a></li>
+                                <li><a class="dropdown-item" href="pc.html">POSTURE CORRECTION </a></li>
+
+                                <li><a class="dropdown-item" href="op.html">ORTHOTICS AND PROSTHETIC SUGGESTIONS </a></li>
+                                <li><a class="dropdown-item" href="nd.html">DRY NEEDLING </a></li>
+                                <li><a class="dropdown-item" href="mp.html">MUSCULOSKELETAL PHYSIOTHERAPY </a></li>
+                                <li><a class="dropdown-item" href="mm.html">MCKENZIE METHOD</a></li>
+                                <li><a class="dropdown-item" href="kt.html">KINESIO TAPING </a></li>
+                                <li><a class="dropdown-item" href="fm.html">FOOTWEAR MODIFICATIONS</a></li>
+                                <li><a class="dropdown-item" href="ep.html">EXERCISE PHYSIOTHERAPY </a></li>
+                                <li><a class="dropdown-item" href="ct.html">Chiropractic Care </a></li>
+								<li><a class="dropdown-item scroll" href="cp.html">CHRONIC PAIN MANAGEMENT </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contact.html"style="
+                            color: black;
+                        ">Contact</a>
+                        </li>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="career.html" style="
+                          color: black;
+                      ">Career</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="reviews.html" style="
+                          color: black;
+                      ">Review</a>
+                       <li class="nav-item">
+                        <a class="nav-link " href="Book.html" style="
+                          color: black;">Booking</a>
+                    </li>
+                      </li>   
+                      <li class="nav-item">
+                            
+                        <a class="nav-link  active" href="resources.html" style="
+                          color: black;">Resources</a>
+                    </li></a>
+                    </ul>
+                    <!--/search-right-->
+                    <!--//search-right-->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            Resources </h2>
+                        <p class="inner-page-para mt-2">
+                            Beauty Care for Everyone</p>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span> Resources</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+  <!-- FAQ Section -->
+<section class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-question">What is physiotherapy?</div>
+    <div class="faq-answer">Physiotherapy is a healthcare practice that focuses on restoring movement and function through exercise, manual therapy, and education.</div>
+
+    <div class="faq-question">How do I know if I need physiotherapy?</div>
+    <div class="faq-answer">If you have pain, reduced mobility, or need rehabilitation after an injury or surgery, a physiotherapist can help assess and treat your condition.</div>
+
+    <div class="faq-question">Do I need a doctor's referral for physiotherapy?</div>
+    <div class="faq-answer">In most cases, you do not need a doctor's referral to see a physiotherapist, but some insurance policies may require one for reimbursement.</div>
+
+    <div class="faq-question">How long does a physiotherapy session last?</div>
+    <div class="faq-answer">A typical physiotherapy session lasts between 30 to 60 minutes, depending on the treatment plan and condition.</div>
+
+    <div class="faq-question">What should I wear to my physiotherapy appointment?</div>
+    <div class="faq-answer">Wear comfortable, loose-fitting clothing that allows easy movement. For specific treatments, your physiotherapist may recommend particular attire.</div>
+
+    <div class="faq-question">Can physiotherapy help with chronic pain?</div>
+    <div class="faq-answer">Yes, physiotherapy can help manage and reduce chronic pain through exercises, manual therapy, and lifestyle recommendations tailored to your condition.</div>
+
+    <div class="faq-question">What conditions do physiotherapists treat?</div>
+    <div class="faq-answer">Physiotherapists treat conditions related to musculoskeletal, neurological, cardiovascular, and respiratory systems, such as back pain, arthritis, stroke, and post-surgery rehabilitation.</div>
+
+    <div class="faq-question">Are physiotherapy treatments painful?</div>
+    <div class="faq-answer">While some treatments might cause temporary discomfort, physiotherapists aim to minimize pain and focus on improving mobility and strength gradually.</div>
+
+    <div class="faq-question">How many physiotherapy sessions will I need?</div>
+    <div class="faq-answer">The number of sessions varies depending on the condition, severity, and individual response to treatment. Your physiotherapist will create a personalized treatment plan for you.</div>
+
+    <div class="faq-question">Does physiotherapy have any side effects?</div>
+    <div class="faq-answer">Physiotherapy is generally safe, but some people may experience mild soreness or fatigue after sessions. These effects are temporary and indicate progress.</div>
+
+    <div class="faq-question">Can physiotherapy help with sports injuries?</div>
+    <div class="faq-answer">Yes, physiotherapy is highly effective in treating and preventing sports injuries by improving strength, flexibility, and overall performance.</div>
+
+    <div class="faq-question">How soon will I see results from physiotherapy?</div>
+    <div class="faq-answer">Results depend on the condition and adherence to the treatment plan. Some may notice improvement after a few sessions, while others might take weeks or months.</div>
+
+    <div class="faq-question">Can I do physiotherapy at home?</div>
+    <div class="faq-answer">Home exercises prescribed by your physiotherapist are a crucial part of treatment. However, in-clinic sessions may provide additional benefits through professional guidance and specialized equipment.</div>
+
+    <div class="faq-question">What happens during the first physiotherapy appointment?</div>
+    <div class="faq-answer">During your first appointment, the physiotherapist will assess your condition, discuss your medical history, and create a personalized treatment plan based on your goals.</div>
+
+    <div class="faq-question">Can physiotherapy prevent injuries?</div>
+    <div class="faq-answer">Yes, physiotherapy focuses on strengthening muscles, improving posture, and increasing flexibility to reduce the risk of future injuries.</div>
+</section>
+
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-icon"><i class="fas fa-comment"></i></button>
+        <div class="chatbot-popup">
+            <div class="chatbot-header">PhysioBot</div>
+            <div class="chatbot-content">
+                <div class="chatbot-message">Hi! I'm PhysioBot. How can I help you today? 😊</div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" class="chatbot-input" placeholder="Ask about physiotherapy or our FAQs...">
+                <button class="chatbot-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!--/w3l-footer-29-main-->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container">
+                <div class="row footer-top-29">
+                    <div class="col-lg-3 col-md-6 footer-list-29 footer-1 pe-lg-5">
+                        <div class="bottom-copies">
+
+                            <img class="img1" src="assets/images/logo.png" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-3">
+
+                        <p class="copy-footer-29 text-center">© 2024. All rights reserved | Designed by <a href="https://abhinanthpy.github.io/asteroid/index.html">Asteroid.in</a></p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-list-29 mt-lg-0 mt-4">
+                        <div class="main-social-footer-29">
+                            <a href="#facebook" class="facebook"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#twitter" class="twitter"><span class="fab fa-twitter"></span></a>
+                            <a href="#instagram" class="instagram"><span class="fab fa-instagram"></span></a>
+                            <a href="#linkd" class="linkd"><span class="fab fa-linkedin-in"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer>
+    <!-- Scripts -->
+    <script>
+        const faqData = {
+            "what is physiotherapy": "Physiotherapy is a healthcare practice that focuses on restoring movement and function through exercise, manual therapy, and education.",
+            "how do i know if i need physiotherapy": "If you have pain, reduced mobility, or need rehabilitation after an injury or surgery, a physiotherapist can help assess and treat your condition.",
+            "do i need a doctor's referral for physiotherapy": "In most cases, you do not need a doctor's referral to see a physiotherapist, but some insurance policies may require one for reimbursement."
+        };
+
+        const chatbotIcon = document.querySelector('.chatbot-icon');
+        const chatbotPopup = document.querySelector('.chatbot-popup');
+        const chatbotInput = document.querySelector('.chatbot-input');
+        const chatbotContent = document.querySelector('.chatbot-content');
+        const chatbotSend = document.querySelector('.chatbot-send');
+
+        // Toggle chatbot popup
+        chatbotIcon.addEventListener('click', () => {
+            chatbotPopup.style.display = chatbotPopup.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Chatbot functionality
+        chatbotSend.addEventListener('click', () => {
+            const userMessage = chatbotInput.value.trim();
+            if (userMessage) {
+                addMessage(userMessage, 'user');
+
+                const botResponse = getFaqResponse(userMessage) || "I'm not sure about that. Can you ask something else?";
+                addMessage(botResponse, 'bot');
+            }
+        });
+
+        function addMessage(message, sender) {
+            const messageBubble = document.createElement('div');
+            messageBubble.classList.add('chatbot-message');
+            if (sender === 'user') messageBubble.classList.add('user');
+            messageBubble.textContent = message;
+            chatbotContent.appendChild(messageBubble);
+            chatbotContent.scrollTop = chatbotContent.scrollHeight;
+            chatbotInput.value = '';
+        }
+
+        function getFaqResponse(message) {
+            const query = message.toLowerCase();
+            return faqData[query];
+        }
+
+        // FAQ Section toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
+
